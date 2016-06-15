@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C7064D5B1D07723B00C4A33C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D5A1D07723B00C4A33C /* main.swift */; };
+		C7064D621D07749600C4A33C /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D611D07749600C4A33C /* Meteo.swift */; };
+		C7064D641D0776B300C4A33C /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D631D0776B300C4A33C /* NetworkResult.swift */; };
+		C7064D661D0777DC00C4A33C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D651D0777DC00C4A33C /* SwiftyJSON.swift */; };
+		C7064D681D0779A000C4A33C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D671D0779A000C4A33C /* CurrentWeather.swift */; };
+		C7064D6A1D077B0600C4A33C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D691D077B0600C4A33C /* Extensions.swift */; };
+		C7064D6C1D077C6100C4A33C /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7064D6B1D077C6100C4A33C /* WeatherResult.swift */; };
+		C773D7911D0C65AB00423BB1 /* WeatherDescriptionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7901D0C65AB00423BB1 /* WeatherDescriptionStyle.swift */; };
+		C773D7931D0C65BF00423BB1 /* WeatherDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7921D0C65BF00423BB1 /* WeatherDescriptor.swift */; };
+		C773D7951D0C661F00423BB1 /* WeatherMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7941D0C661F00423BB1 /* WeatherMan.swift */; };
+		C773D7971D0C7E0400423BB1 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7961D0C7E0400423BB1 /* CLI.swift */; };
+		C773D7991D0C8C7900423BB1 /* CLIArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7981D0C8C7900423BB1 /* CLIArguments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +36,17 @@
 /* Begin PBXFileReference section */
 		C7064D571D07723B00C4A33C /* WeatherManCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WeatherManCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7064D5A1D07723B00C4A33C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C7064D611D07749600C4A33C /* Meteo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
+		C7064D631D0776B300C4A33C /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C7064D651D0777DC00C4A33C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C7064D671D0779A000C4A33C /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		C7064D691D077B0600C4A33C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C7064D6B1D077C6100C4A33C /* WeatherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
+		C773D7901D0C65AB00423BB1 /* WeatherDescriptionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDescriptionStyle.swift; sourceTree = "<group>"; };
+		C773D7921D0C65BF00423BB1 /* WeatherDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDescriptor.swift; sourceTree = "<group>"; };
+		C773D7941D0C661F00423BB1 /* WeatherMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherMan.swift; sourceTree = "<group>"; };
+		C773D7961D0C7E0400423BB1 /* CLI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
+		C773D7981D0C8C7900423BB1 /* CLIArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLIArguments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +79,18 @@
 		C7064D591D07723B00C4A33C /* WeatherManCLI */ = {
 			isa = PBXGroup;
 			children = (
+				C7064D651D0777DC00C4A33C /* SwiftyJSON.swift */,
 				C7064D5A1D07723B00C4A33C /* main.swift */,
+				C773D7981D0C8C7900423BB1 /* CLIArguments.swift */,
+				C773D7961D0C7E0400423BB1 /* CLI.swift */,
+				C773D7941D0C661F00423BB1 /* WeatherMan.swift */,
+				C773D7901D0C65AB00423BB1 /* WeatherDescriptionStyle.swift */,
+				C773D7921D0C65BF00423BB1 /* WeatherDescriptor.swift */,
+				C7064D611D07749600C4A33C /* Meteo.swift */,
+				C7064D6B1D077C6100C4A33C /* WeatherResult.swift */,
+				C7064D691D077B0600C4A33C /* Extensions.swift */,
+				C7064D671D0779A000C4A33C /* CurrentWeather.swift */,
+				C7064D631D0776B300C4A33C /* NetworkResult.swift */,
 			);
 			path = WeatherManCLI;
 			sourceTree = "<group>";
@@ -119,7 +152,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7064D641D0776B300C4A33C /* NetworkResult.swift in Sources */,
+				C7064D6A1D077B0600C4A33C /* Extensions.swift in Sources */,
+				C773D7991D0C8C7900423BB1 /* CLIArguments.swift in Sources */,
+				C7064D681D0779A000C4A33C /* CurrentWeather.swift in Sources */,
+				C773D7951D0C661F00423BB1 /* WeatherMan.swift in Sources */,
+				C773D7971D0C7E0400423BB1 /* CLI.swift in Sources */,
+				C773D7931D0C65BF00423BB1 /* WeatherDescriptor.swift in Sources */,
+				C7064D621D07749600C4A33C /* Meteo.swift in Sources */,
+				C7064D6C1D077C6100C4A33C /* WeatherResult.swift in Sources */,
+				C773D7911D0C65AB00423BB1 /* WeatherDescriptionStyle.swift in Sources */,
 				C7064D5B1D07723B00C4A33C /* main.swift in Sources */,
+				C7064D661D0777DC00C4A33C /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +285,7 @@
 				C7064D601D07723B00C4A33C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

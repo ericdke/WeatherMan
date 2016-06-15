@@ -8,5 +8,19 @@
 
 import Foundation
 
-print("Hello, World!")
+let cli = CLI(input: NSProcessInfo.processInfo().arguments)
 
+if let args = cli.getArgs() {
+    let wm = WeatherMan()
+    if let country = args.country {
+        wm.printCurrentWeather(args.town, country: country, style: args.style)
+    } else {
+        wm.printCurrentWeather(args.town, style: args.style)
+    }
+} else {
+    print(cli.errorMessage)
+    print(cli.helpMessage)
+    exit(1)
+}
+
+dispatch_main()
