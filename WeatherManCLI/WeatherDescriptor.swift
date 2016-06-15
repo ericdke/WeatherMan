@@ -10,21 +10,21 @@ import Foundation
 
 public class WeatherDescriptor {
     
-    private let dateFormatter: NSDateFormatter
+    private let dateFormatter: DateFormatter
     
     public init() {
-        dateFormatter = NSDateFormatter()
-        dateFormatter.calendar = NSCalendar.currentCalendar()
-        dateFormatter.locale = NSLocale.currentLocale()
+        dateFormatter = DateFormatter()
+        dateFormatter.calendar = Calendar.current()
+        dateFormatter.locale = Locale.current()
         dateFormatter.dateFormat = "yyy/MM/dd HH:mm:ss"
     }
     
-    public func describe(weather: CurrentWeather, style: WeatherDescriptionStyle = .DetailedString) {
+    public func describe(weather: CurrentWeather, style: WeatherDescriptionStyle = .detailedString) {
         let d = makeDescription(weather, style: style)
         print(d)
     }
     
-    private func makeDescription(weather: CurrentWeather, style: WeatherDescriptionStyle) -> String {
+    private func makeDescription(_ weather: CurrentWeather, style: WeatherDescriptionStyle) -> String {
         let loc = "\(weather.city) (\(weather.country))"
         let ds = dateString(weather)
         let base = "\(loc), \(ds)."
@@ -32,20 +32,20 @@ public class WeatherDescriptor {
         let normal = "\(base) \(temp)"
         let mood = "Ciel: \(weather.subCategory)."
         switch style {
-        case .DetailedString:
+        case .detailedString:
             if let dir = weather.windDirection {
                 return "\(normal) \(mood) Vent: \(dir.degreesToCompass()) à \(weather.windSpeed) km/h."
             } else {
                 return "\(normal) \(mood)"
             }
-        case .String:
+        case .string:
             return normal
-        case .MiniString:
+        case .miniString:
             return temp
         }
     }
     
-    private func dateString(weather: CurrentWeather) -> String {
-        return dateFormatter.stringFromDate(weather.date)
+    private func dateString(_ weather: CurrentWeather) -> String {
+        return dateFormatter.string(from: weather.date as Date)
     }
 }

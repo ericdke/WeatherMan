@@ -31,26 +31,26 @@ public class CLI {
         populate(Array(input.dropFirst()))
     }
     
-    private func populate(args: [String]) {
-        for (index, item) in args.enumerate() {
+    private func populate(_ args: [String]) {
+        for (index, item) in args.enumerated() {
             if args.count > index + 1 {
-                let it = item.lowercaseString
+                let it = item.lowercased()
                 if it == "-t" || it == "--town" {
-                    arguments.town = args[index + 1].lowercaseString
+                    arguments.town = args[index + 1].lowercased()
                 } else if it == "-c" || it == "--country" {
-                    arguments.country = args[index + 1].lowercaseString
+                    arguments.country = args[index + 1].lowercased()
                 } else if it == "-s" || it == "--help" {
-                    let value = args[index + 1].lowercaseString
+                    let value = args[index + 1].lowercased()
                     if value == "short" {
-                        arguments.style = .MiniString
+                        arguments.style = .miniString
                     } else if value == "normal" {
-                        arguments.style = .String
+                        arguments.style = .string
                     }
                 }
             }
         }
         if arguments.style == nil {
-            arguments.style = .DetailedString
+            arguments.style = .detailedString
         }
     }
     

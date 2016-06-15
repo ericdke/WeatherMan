@@ -9,5 +9,5 @@
 import Foundation
 
 public enum WeatherDescriptionStyle {
-    case MiniString, String, DetailedString
+    case miniString, string, detailedString
 }

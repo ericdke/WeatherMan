@@ -38,9 +38,9 @@ public class Meteo {
         }
     }
     
-    private func getResponse(url: NSURL, completion: (networkResult: NetworkResult)->()) {
-        NSURLSession.sharedSession().dataTaskWithURL(url) { (
-            data: NSData?, response: NSURLResponse?, error: NSError?
+    private func getResponse(_ url: URL, completion: (networkResult: NetworkResult)->()) {
+        URLSession.shared().dataTask(with: url) { (
+            data: Data?, response: URLResponse?, error: NSError?
             ) -> Void in
             if let data = data where error == nil {
                 completion(networkResult:
@@ -52,18 +52,18 @@ public class Meteo {
             }.resume()
     }
     
-    private func makeCurrentWeather(json: JSON) -> CurrentWeather? {
+    private func makeCurrentWeather(_ json: JSON) -> CurrentWeather? {
         guard let temp = json["main"]["temp"].int,
             speed = json["wind"]["speed"].double,
             cat = json["weather"][0]["main"].string,
             icon = json["weather"][0]["icon"].string,
-            iconURL = NSURL(string: "http://openweathermap.org/img/w/\(icon).png"),
+            iconURL = URL(string: "http://openweathermap.org/img/w/\(icon).png"),
             desc = json["weather"][0]["description"].string,
             city = json["name"].string,
             country = json["sys"]["country"].string else {
                 return nil
         }
-        return CurrentWeather(date: NSDate(),
+        return CurrentWeather(date: Date(),
                               city: city,
                               country: country,
                               celsius: temp,
@@ -74,14 +74,14 @@ public class Meteo {
                               iconURL: iconURL)
     }
     
-    private func makeURL(city: String, country code: String? = nil) -> NSURL? {
+    private func makeURL(_ city: String, country code: String? = nil) -> URL? {
         guard let city = city.percentEncoded() else {
             return nil
         }
         if let c = code, country = c.percentEncoded() {
-            return NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(city),\(country)&appid=\(appID)&units=metric&lang=fr")
+            return URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(city),\(country)&appid=\(appID)&units=metric&lang=fr")
         }
-        return NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(appID)&units=metric&lang=fr")
+        return URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(appID)&units=metric&lang=fr")
     }
     
 }

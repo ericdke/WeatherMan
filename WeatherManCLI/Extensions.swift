@@ -10,8 +10,8 @@ import Foundation
 
 public extension String {
     func percentEncoded() -> String? {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(
-            NSCharacterSet.URLQueryAllowedCharacterSet()
+        return self.addingPercentEncoding(
+            withAllowedCharacters: CharacterSet.urlQueryAllowed
         )
     }
 }
