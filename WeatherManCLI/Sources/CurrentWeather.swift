@@ -13,15 +13,15 @@ public struct CurrentWeather {
     typealias KMHour = Double
     typealias MeteorologicalDegree = Int
     
-    let date: NSDate
+    let date: Date
     let city: String
     let country: String
-    let celsius: Int
+    let celsius: Double
     let category: String
     let subCategory: String
     let windSpeed: MeterSecond
     let windDirection: MeteorologicalDegree?
-    let iconURL: NSURL
+    let iconURL: URL
     
     var windSpeedKMH: KMHour {
         let s = windSpeed * 3.6

@@ -10,15 +10,15 @@ import Foundation
 
 public extension String {
     func percentEncoded() -> String? {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(
-            NSCharacterSet.URLQueryAllowedCharacterSet()
+        return self.addingPercentEncoding(
+            withAllowedCharacters: CharacterSet.urlQueryAllowed
         )
     }
 }
 
 public extension Double {
     func roundedOneDecimal() -> Double {
-        return round(self * 10.0) / 10.0
+        return (self * 10.0).rounded() / 10.0
     }
 }
 

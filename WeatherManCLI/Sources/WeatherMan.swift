@@ -20,10 +20,10 @@ public class WeatherMan {
     
     public func printCurrentWeather(city: String,
                                     country code: String? = nil,
-                                            style: WeatherDescriptionStyle = .DetailedString) {
-        meteo.currentWeather(city, country: code) { (result) in
+                                    style: WeatherDescriptionStyle = .detailedString) {
+        meteo.currentWeather(city: city, country: code) { (result) in
             if result.success {
-                self.descriptor.describe(result.weather, style: style)
+                self.descriptor.describe(weather: result.weather, style: style)
                 exit(0)
             } else if let error = result.error {
                 print(error)
