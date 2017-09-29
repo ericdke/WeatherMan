@@ -1,0 +1,1 @@
+Ce tutoriel a été converti pour Swift 4 (Xcode 9) donc il y a quelques différences avec la version sur AYA.io. Par exemple nous n'utilisons plus SwiftyJSON, et quelques types ont été modifiés. Cela reste facile à suivre même pour les débutants, promis. :)
