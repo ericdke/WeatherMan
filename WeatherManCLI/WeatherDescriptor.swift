@@ -14,8 +14,8 @@ public class WeatherDescriptor {
     
     public init() {
         dateFormatter = DateFormatter()
-        dateFormatter.calendar = Calendar.current()
-        dateFormatter.locale = Locale.current()
+        dateFormatter.calendar = Calendar.current
+        dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = "yyy/MM/dd HH:mm:ss"
     }
     
@@ -46,6 +46,6 @@ public class WeatherDescriptor {
     }
     
     private func dateString(_ weather: CurrentWeather) -> String {
-        return dateFormatter.string(from: weather.date as Date)
+        return dateFormatter.string(from: weather.date)
     }
 }

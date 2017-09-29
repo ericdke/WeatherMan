@@ -11,5 +11,5 @@ import Foundation
 public struct WeatherResult {
     let success: Bool
     let weather: CurrentWeather!
-    let error: NSError?
+    let error: Error?
 }

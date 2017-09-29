@@ -18,7 +18,6 @@
 		C773D7951D0C661F00423BB1 /* WeatherMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7941D0C661F00423BB1 /* WeatherMan.swift */; };
 		C773D7971D0C7E0400423BB1 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7961D0C7E0400423BB1 /* CLI.swift */; };
 		C773D7991D0C8C7900423BB1 /* CLIArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773D7981D0C8C7900423BB1 /* CLIArguments.swift */; };
-		C77B55381D11F32700B3149A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77B55371D11F32700B3149A /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,7 +45,6 @@
 		C773D7941D0C661F00423BB1 /* WeatherMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherMan.swift; sourceTree = "<group>"; };
 		C773D7961D0C7E0400423BB1 /* CLI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
 		C773D7981D0C8C7900423BB1 /* CLIArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLIArguments.swift; sourceTree = "<group>"; };
-		C77B55371D11F32700B3149A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +77,6 @@
 		C7064D591D07723B00C4A33C /* WeatherManCLI */ = {
 			isa = PBXGroup;
 			children = (
-				C77B55371D11F32700B3149A /* SwiftyJSON.swift */,
 				C7064D5A1D07723B00C4A33C /* main.swift */,
 				C773D7981D0C8C7900423BB1 /* CLIArguments.swift */,
 				C773D7961D0C7E0400423BB1 /* CLI.swift */,
@@ -122,12 +119,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = AYA.io;
 				TargetAttributes = {
 					C7064D561D07723B00C4A33C = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -156,7 +153,6 @@
 				C7064D641D0776B300C4A33C /* NetworkResult.swift in Sources */,
 				C7064D6A1D077B0600C4A33C /* Extensions.swift in Sources */,
 				C773D7991D0C8C7900423BB1 /* CLIArguments.swift in Sources */,
-				C77B55381D11F32700B3149A /* SwiftyJSON.swift in Sources */,
 				C7064D681D0779A000C4A33C /* CurrentWeather.swift in Sources */,
 				C773D7951D0C661F00423BB1 /* WeatherMan.swift in Sources */,
 				C773D7971D0C7E0400423BB1 /* CLI.swift in Sources */,
@@ -180,13 +176,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -225,13 +229,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -250,6 +262,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -257,7 +270,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -265,7 +279,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

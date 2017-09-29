@@ -8,7 +8,7 @@
 
 import Foundation
 
-let cli = CLI(input: ProcessInfo.processInfo().arguments)
+let cli = CLI(input: ProcessInfo().arguments)
 
 guard let args = cli.getArgs() else {
     print(cli.errorMessage)

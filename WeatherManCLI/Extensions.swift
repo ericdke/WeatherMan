@@ -18,7 +18,7 @@ public extension String {
 
 public extension Double {
     func roundedOneDecimal() -> Double {
-        return round(self * 10.0) / 10.0
+        return (self * 10.0).rounded() / 10.0
     }
 }
 
